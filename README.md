@@ -13,29 +13,29 @@ The purpose of this lab....
 
 <h2>Key Points Within Lab: </h2>
 
-- <b>Installation of Active Directory and creation of mydomain.com</b>
-- <b>Routing enabled via configuration of RAS and NAT</b>
-- <b>Configuration of DHCP for automatic IP addressing</b>
-- <b>Powershell script for automatic user account creation</b>
-- <b>Creation of user workstation (CLIENT1) and joining of CLIENT1 to mydomain.com</b>
-- <b>Creation of various Security Groups for network division into specific departments</b>
+- <b>Creation of 'archive' and 'backup' directories for proper file collection and storage.</b>
+- <b>Creation of 'log.tar' file archive to be stored within the 'archive' directory located inside of /home/user/.</b>
+- <b>Utilization of verbose output in order to track which files are being archived.</b>
+- <b>Proper tag utilization to list 'archive' contents without extraction.</b>
+- <b>Extraction of files to 'backup' directory for log preservation.</b>
+
 
 <h2>Lab walk-through:</h2>
 
 <p align="center">
-Pictured below is a basic diagram of the full, configured network. The first VM, the domain controller (denoted DC) houses Active Directory and our domain (mydomain.com) via the installation of a Windows Server 2019 iso. This VM is configured to have two network adapters; one external adapter that connects to the internet, and one internal adapter that clients from inside the private network will connect to. The external NIC automatically receives IP addressing from my home router, while the internal NIC has IP addressing manually assigned to it. NAT and routing are configured on the domain controller allowing clients from the internal portion of the network a means to reach the internet through the domain controller. DHCP is configured with the info listed below so that our client machine (denoted CLIENT1, and using Windows 10) can automatically receive an IP address. CLIENT1 is joined to mydomain.com allowing any respective members to login and use this machine with their respective credentials. <br/>
+In the image below, we are initially located within the /var/log directory since our goal is to view and eventually copy all log files that end in '.log'. With the command "ls *.log" we are able to see the scope of the log files which we will be archiving in the near future. Next, we switch back to our home directory in order to properly create and store the 'archive' and 'backup' directories.<br/>
 <img src="https://i.imgur.com/BEFhvS2.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
-Viewing the dashboard of AD server manager and all configured services on the domain controller:  <br/>
+After creating the 'archive' and 'backup' directories inside of /home/, we are now back in /var/log/. With the command "tar -cvf ~/archive/log.tar *.log", I am able to successfully create a new file named 'log.tar' which will be housed in the 'archive' directory and it will contain all log files which end in '.log'. (I would like to note that sudo is employed in the screenshot in order to give me the necessary permissions to access the log files and write them to log.tar). Additionally, the -v tag of the former command provides a verbose output which showcases all of the log files that have been copied into the new log.tar file. However, we are still able to use the command "tar -tf ./archive/log.tar" in order to list the contents of 'log.tar' and ensure that all necessary files were archived accordingly.    <br/>
 <img src="https://i.imgur.com/I5WX1Vs.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
-DHCP enabled but still needs configuring: <br/>
+Finally, ..... <br/>
 <img src="https://i.imgur.com/E9V1kcS.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
