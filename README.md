@@ -3,7 +3,9 @@
  ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
 
 <h2>Description</h2>
-The purpose of this lab....
+** This lab is modeled after Challenge Lab C within the 'Linux Essentials' course from the Network Development Group (NDG). **
+
+The purpose of this lab is to demonstrate proficiency of navigating the Linux filesystem, creating and modifying directories, and archiving information (specifically, log files in this scenario). 
 <br />
 
 
@@ -35,7 +37,7 @@ After creating the 'archive' and 'backup' directories inside of /home/, we are n
 <br />
 
 <p align="center">
-Finally, ..... <br/>
+Finally, we switch into the 'backup' directory which was created earlier. Using the command "tar -xvf ~/archive/log.tar" we extract the contents of the log.tar file into the 'backup' directory. Using 'ls' we are able to check the 'backup' directory and see that everything which was contained in log.tar is now also stored in 'backup'. From here, the log files will be safely preserved until further notice which will allow us to examine them for any information that may need to be investigated further.  <br/>
 <img src="https://i.imgur.com/E9V1kcS.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
