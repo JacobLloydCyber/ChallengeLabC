@@ -3,10 +3,11 @@
 <h2>Description</h2>
 ** This lab reflects Challenge Lab C in the 'Linux Essentials' course from the Network Development Group. **
 
-The purpose of this lab is to demonstrate proficiency while navigating the Linux filesystem, creating and modifying directories, and ensuring the safe storage and preservation of log files. This lab states that suspicious activity has been detected on the system, therefore, we must and archive and preserve specific log files so that they may be further analyzed. In this lab we are tasked with the following steps:
+The purpose of this lab is to demonstrate proficiency while navigating the Linux filesystem, creating directories for information storage, and transferring log files to alternate locations to help ensure data preservation. This lab states that suspicious activity has been detected on the system, therefore, we must archive and preserve a specific set of log files so that they may be further analyzed. In this lab we are tasked with the following steps:
 
-- Create an archive of all the files in /var/log that end with the .log extension, name this new file 'log.tar'. Utilize tags to showcase that the correct information was archived to this new file.
-- Extract the collected log files to a separate and tamper-free backup directory so that the information can be safely analyzed.
+- Gather all files in /var/log that end with the '.log' extension, and send these files to a new archive named "log.tar".
+- When archiving the log files, utilize tags to help showcase that the correct information was collected.
+- Extract the collected log files to a separate and tamper-free backup directory where the information can be safely analyzed.
 
 
 <h2>Key Points Within Lab: </h2>
