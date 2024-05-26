@@ -12,29 +12,27 @@ The purpose of this lab is to demonstrate proficiency while navigating the Linux
 
 <h2>Key Points Within Lab: </h2>
 
-- <b>Creation of 'archive' and 'backup' directories for proper file collection and storage.</b>
-- <b>Creation of 'log.tar' file archive to be stored within the 'archive' directory located inside of /home/user/.</b>
-- <b>Utilization of verbose output in order to track which files are being archived.</b>
-- <b>Proper tag utilization to list 'archive' contents without extraction.</b>
-- <b>Extraction of files to 'backup' directory for log preservation.</b>
+- <b>Demonstrate ability to create directories within a Linux server.</b>
+- <b>Demonstrate ability to use 'tar' to archive info to a new file and extract the collected info to a new directory.</b>
+- <b>Demonstrate correct tag usage with 'tar' to produce verbose output, list file contents, and perform extraction.</b>
 
 
 <h2>Lab walk-through:</h2>
 
 <p align="center">
-In the image below, we are initially located within the /var/log directory since our goal is to view and eventually copy all log files that end in '.log'. With the command "ls *.log" we are able to see the scope of the log files which we will be archiving in the near future. Next, we switch back to our home directory in order to properly create and store the 'archive' and 'backup' directories.<br/>
+In the image below, I am located within the /var/log directory. By issuing the command "ls *.log" I am able to see the scope of the log files which I will be archiving in the near future. Before I collect any information, I must first create the directories in which I will archive and extract the log files to. So, after switching back into my /home directory, I am able to use the 'mkdir' command to create two new directories which I have called "archive" and "backup".<br/>
 <img src="https://i.imgur.com/BEFhvS2.png" height="80%" width="80%" alt="LinChallLab"/>
 <br />
 <br />
 
 <p align="center">
-After creating the 'archive' and 'backup' directories inside of /home/, we are now back in /var/log/. With the command "tar -cvf ~/archive/log.tar *.log", I am able to successfully create a new file named 'log.tar' which will be housed in the 'archive' directory and it will contain all log files which end in '.log'. (I would like to note that sudo is employed in the screenshot in order to give me the necessary permissions to access the log files and write them to log.tar). Additionally, the -v tag of the former command provides a verbose output which showcases all of the log files that have been copied into the new log.tar file. However, we are still able to use the command "tar -tf ./archive/log.tar" in order to list the contents of 'log.tar' and ensure that all necessary files were archived accordingly.    <br/>
+With the "archive" and "backup" directories created, I can now switch back into /var/log and begin collecting the necessary info. By issuing the command "tar -cvf ~/archive/log.tar *.log", I am able to create a new archive file named "log.tar". This new file will be stored in the "archive" directory and it will contain all log files from /var/log which end in ".log". I would like to note that the -v tag included in the previous tar command provides a verbose output which allows me to see all of the log files that were collected and copied to create log.tar. Additionally, the command "tar -tf ./archive/log.tar", allows me to check the contents of log.tar in order to confirm that all necessary files were archived accordingly.    <br/>
 <img src="https://i.imgur.com/I5WX1Vs.png" height="80%" width="80%" alt="LinChallLab"/>
 <br />
 <br />
 
 <p align="center">
-Finally, we switch into the 'backup' directory which was created earlier. Using the command "tar -xvf ~/archive/log.tar" we extract the contents of the log.tar file into the 'backup' directory. Using 'ls' we are able to check the 'backup' directory and see that everything which was contained in log.tar is now also stored in 'backup'. From here, the log files will be safely preserved until further notice which will allow us to examine them for any information that may need to be investigated further.  <br/>
+With the necessary log files archived, I can finally switch into the "backup" directory to perform data extraction. By running the command "tar -xvf ~/archive/log.tar" I am able to extract the contents of the log.tar file into the "backup" directory. Now, by listing the directory contents, I am able to confirm that all the data which was archived in log.tar is now also stored in the "backup" directory. At this point, the log files will be safely preserved until further notice, allowing them to be examined for any information that may need to be investigated further.  <br/>
 <img src="https://i.imgur.com/E9V1kcS.png" height="80%" width="80%" alt="LinChallLab"/>
 <br />
 <br />
