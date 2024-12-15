@@ -1,4 +1,7 @@
 <h1>Challenge Lab C: Log File Archiving</h1>
+<!--
+ ### [YouTube Demonstration](https://youtu.be/INSERT-DEMO-LINK-HERE)
+--!>
 
 <h2>Description</h2>
 ** This lab reflects Challenge Lab C in the 'Linux Essentials' course from the Network Development Group. **
